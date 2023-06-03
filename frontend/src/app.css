@@ -1,0 +1,312 @@
+:root{
+    --fontColor1: #2d2d2d;
+    --fontColor2: #4a4a4a;
+    --fontDonate: tomato;
+    --hoverColor: #fff;
+
+    --purplish: #9376E0;
+    --pinkish: #E893CF;
+    --lightpinkish: #F3BCC8;
+    --yellowish: #F6FFA6;
+    --whitist: #f8f6f6;
+}
+
+html{
+    box-sizing: border-box;
+}
+
+*, *::after, *::before{
+    box-sizing: inherit;
+    user-select: none;
+}
+body{
+    margin: 0;
+    padding: 0;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    border-bottom: 5px solid var(--pinkish);
+    background-color: var(--whitist);
+}
+
+nav > .navLink{
+    font-size: 2rem;
+    color: var(--fontColor1);
+    font-weight: 600;   
+    letter-spacing: 0.4rem;
+    margin-left: 1rem;
+}
+
+nav div > .navLink{
+    padding: 0 0.3rem;
+    font-size: 1.3rem;
+    color: var(--fontColor2);
+    margin-right: 1rem;   
+    letter-spacing: 0.2rem;
+    transition: border-Bottom 0.3s;
+}
+
+nav > .navLink::first-letter{
+    color: var(--purplish);
+}
+
+nav div > .navLinkHome{
+    font-size: 1.3rem;
+    color: var(--purplish);
+    margin-right: 1rem; 
+    padding: 0.3rem 0.5rem;  
+    border-radius: 0.4rem;
+    letter-spacing: 0.2rem;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Nav Hover part  */
+nav div > .navLink:hover{
+    border-bottom: 6px solid var(--purplish);
+    border-radius: 10px;
+}
+
+nav div > .navLinkHome:hover{
+    background-color: var(--purplish);
+    color: var(--hoverColor);
+}
+
+
+/* -- Home --  */
+#main{
+    overflow: hidden;
+    height: max-content;
+    min-height: 100vh;
+    background-color: var(--purplish);
+}
+
+#main > div{
+    height: max-content;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin: 4rem 1rem 1rem 1rem;
+}
+
+#main > div > div > h1{
+    font-size: 5rem;
+    letter-spacing: 0.4rem;
+    font-weight: 600;
+    color: var(--whitist);
+}
+
+#main > div > div > p{
+    font-size: 1.4rem;
+    letter-spacing: 0.2rem;
+}
+
+#main #card h3{
+    width: 100%;
+    text-align: center;
+    font-size: 1.4rem;
+    letter-spacing: 0.4rem;
+    font-weight: 600;
+    color: var(--whitist);
+    margin-bottom: 2rem;
+}
+
+#main #card button{
+    width: 100%;
+    margin: 2rem auto;
+    font-size: 1.4rem;
+    background-color: var(--whitist);
+    color: var(--purplish);
+    padding: 0.3rem 0.5rem;  
+    border-radius: 0.4rem;
+    letter-spacing: 0.2rem;
+    font-weight: 600;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#main #card img{
+    animation: hello 1s ease-in-out infinite;
+}
+
+/* Home Hover Part  */
+#main #card button:hover{
+    background-color: var(--pinkish);
+    color: var(--whitist);
+}
+
+@keyframes hello {
+    0%{
+        rotate: 15deg;
+    }
+    65%{
+        rotate: -15deg;
+    }
+    100%{
+        rotate: 15deg;
+    }
+}
+
+
+/* -- About --   */
+#about > div > img{
+    width: 400px;
+    height: 400px;
+    border-radius: 1rem;
+    margin: 1rem;
+    box-shadow: 9px 9px 5px -5px rgba(0,0,0,0.75);
+}
+
+#about > div{
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#about > div p{
+    font-size: 1.4rem;
+    margin: 1rem;
+    color: var(--fontColor2);
+}
+
+
+
+/* -- Contact --  */
+#contact{
+    height: 100vh;
+}
+
+#contact > div {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+}
+
+#contact > div button{
+    margin-top: 6rem;
+    font-size: 2rem;
+    padding: 0.8rem 1rem;
+    color: var(--whitist);
+    background-color: var(--purplish);
+    border-radius: 0.5rem;
+    font-weight: 100;
+}
+
+footer{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    background-color: var(--purplish);
+    color: var(--whitist);
+}
+
+
+
+/* -- Payment Successful --  */
+#payment-success{
+    width: 100%;
+    height: 100vh;
+}
+
+#payment-success > div{
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#payment-success > div h1{
+    font-size: 4rem;
+    font-weight: 600;
+}
+#payment-success > div h1::first-letter{
+    color: #9376E0;
+}
+
+
+/* -- fund page --  */
+#total-fund{
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#total-fund > div{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+#total-fund > div > h1{
+    margin-top: -12rem;
+    background-color: var(--purplish);
+    font-size: 3rem;
+    color: var(--whitist);
+    padding: 1rem 2.5rem;
+    border-radius: 1rem;
+    box-shadow: 10px 9px 11px -8px rgba(0,0,0,0.45);
+    transition: transform 1s;
+    cursor: pointer;
+    letter-spacing: 0.2rem;
+}
+
+#total-fund > div > h1::first-letter{
+    color: var(--pinkish);
+}
+
+#total-fund > div > h1:hover{
+    transform: scale(1.1);
+}
+
+
+/* -- Common -- */
+#head{
+    width: 100%;
+    text-align: center;
+    font-size: 2rem;
+    padding: 2rem;
+    
+    background: rgb(147,118,224);
+    background: linear-gradient(133deg, rgba(147,118,224,1) 31%, rgba(9,100,121,1) 100%, rgba(255,255,255,1) 100%);
+    
+    color: var(--whitist);
+}
+
+
+/* -- Media Queries -- */
+@media only screen and (max-width: 1087px){
+    
+    /* -- Home Page --  */
+    #main > div{
+        flex-direction: column-reverse;
+    }
+    #main > div > div{
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+    #main > div > div > h1,p{
+        text-align: center;
+    }
+
+    /* -- About Page --  */
+    #about > div{
+        flex-wrap: wrap;
+    }
+    
+    /* -- Contact Page -- */
+    #contact > div{
+        flex-wrap: wrap;
+    }
+}
